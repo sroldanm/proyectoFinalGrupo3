@@ -18,15 +18,7 @@ class Service {
         });
 
       var body = response.body; 
-
-      if(response.statusCode >=  400) {
-        return listNote;
-      }
-      if(response.statusCode ==  200) {
-        listNote = noteFromMap(body);
-
-        return listNote;
-      }          
+      listNote = noteFromMap(body);        
     } catch (e) { 
         return listNote;
     }
@@ -61,8 +53,6 @@ class Service {
         return note;
       }
       if(response.statusCode ==  200) {
-
-
         return note;
       }          
     } catch (e) { 
